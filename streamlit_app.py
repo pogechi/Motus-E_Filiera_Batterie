@@ -1,6 +1,7 @@
 import streamlit as st
 import folium
 from folium.plugins import TagFilterButton, OverlappingMarkerSpiderfier
+from streamlit_folium import st_folium
 import numpy as np
 import pandas as pd
 
@@ -71,3 +72,5 @@ folium.FitOverlays().add_to(m)
 
 
 st.title("🔋 La filiera delle batterie in Italia 🇮🇹")
+
+st_data = st_folium(m, width=700, height=500)
