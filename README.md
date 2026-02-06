@@ -1,19 +1,10 @@
-# 🎈 Blank app template
+# 🔋 La filiera delle batterie in Italia 🇮🇹
 
-A simple Streamlit app template for you to modify!
+La filiera italiana delle batterie è un ecosistema articolato che include produttori di pacchi batteria, aziende specializzate in macchinari e realtà dedicate a componenti elettronici e materiali chimici. Il settore mostra margini di crescita, in particolare nel riciclo, dove sono ancora poche le aziende che lavorano sul recupero della black mass e per la seconda vita delle batterie; completano il quadro i fornitori di servizi di testing e consorzi EPR.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+In verde sono contrassegnate le aziende già operative in Italia mentre in grigio le realtà prossime all’avvio delle attività. Puoi usare l’icona del filtro sulla mappa per esplorare le aziende lungo l’intera filiera delle batterie.
 
-### How to run it on your own machine
+Non vedi la tua azienda sulla mappa?
+Segnalacela tramite questo breve modulo: ci occuperemo noi di inserirla nella filiera.
 
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+👉 [Compila il form di segnalazione](https://forms.gle/WTkos5SfKXcT1Vme8)
