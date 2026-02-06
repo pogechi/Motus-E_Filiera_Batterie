@@ -73,4 +73,4 @@ folium.FitOverlays().add_to(m)
 
 st.title("🔋 La filiera delle batterie in Italia 🇮🇹")
 
-st_data = st_folium(m, width=700, height=500)
+st_data = st_folium(m)
