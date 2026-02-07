@@ -68,7 +68,7 @@ oms.add_to(m)
 TagFilterButton(categories, clear_text="Deseleziona tutto").add_to(m)
 folium.FitOverlays().add_to(m)
 
-st.logo("motuselogo.png", size="medium")
+st.logo("motuselogo.png", size="large", link="https://www.motus-e.org/")
 
 st.title("🔋 La filiera delle batterie in Italia 🇮🇹")
 
