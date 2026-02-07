@@ -84,17 +84,18 @@ aziende lungo l\'intera filiera delle batterie.""")
 
 st_data = st_folium(m, width=1400, height=700)
 
-st.subheader("📊 Alcuni numeri sulla filiera italiana delle batterie")
+st.subheader("📊 Alcuni numeri")
 row = st.container(horizontal=True)
 
 aziende_censite = len(df)
 aziende_al_nord = len(df[df["Lat"] > 44])
 specializzazione = df["Filiera 1"].value_counts().index[0]
+specializzazione_count = df["Filiera 1"].value_counts().values[0]
 
 with row:
     st.metric(label="Aziende censite", value=aziende_censite, delta=None, border=True)
     st.metric(label="Aziende in Nord Italia", value=f"{aziende_al_nord / aziende_censite:.0%}", delta=None, border=True)
-    st.metric(label="Specializzazione principale", value=specializzazione, delta=None, border=True)
+    st.metric(label="Specializzazione principale", value=f"{specializzazione} ({specializzazione_count / aziende_censite:.0%})", delta=None, border=True)
 
 st.divider()
 
