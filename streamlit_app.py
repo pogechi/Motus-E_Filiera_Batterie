@@ -31,7 +31,6 @@ folium.GeoJson(geo_json_data,
               highlight_function=lambda feature: {"fillColor": "#edfdf9"}).add_to(m)
 
 categories = list(pd.read_excel(data, sheet_name="Dati")["Filiera"])
-motus_logo = "https://www.motus-e.org/wp-content/uploads/2022/01/logo-dark.png"
 
 for azienda, lat, lon, tag1, tag2, tag3, attivo, link in zip(df["Azienda"], df["Lat"], df["Lon"], df["Filiera 1"], df["Filiera 2"], df["Filiera 3"], df["In produzione"], df["Sito Web"]):
 
@@ -74,3 +73,20 @@ folium.FitOverlays().add_to(m)
 st.title("🔋 La filiera delle batterie in Italia 🇮🇹")
 
 st_data = st_folium(m)
+st.divider()
+st.markdown("""La **filiera italiana delle batterie** è un ecosistema articolato 
+che include produttori di pacchi batteria, aziende specializzate in macchinari 
+e realtà dedicate a componenti elettronici e materiali chimici. Il settore mostra 
+margini di crescita, in particolare nel riciclo, dove sono ancora poche le aziende 
+che lavorano sul recupero della black mass e per la seconda vita delle batterie; 
+completano il quadro i fornitori di servizi di testing e consorzi EPR. In verde sono 
+contrassegnate le aziende già operative in Italia mentre in grigio le realtà prossime 
+all’avvio delle attività. Puoi usare l’icona del filtro sulla mappa per esplorare le 
+aziende lungo l\'intera filiera delle batterie. **Non vedi la tua azienda sulla mappa?**
+Segnalacela tramite questo breve modulo: ci occuperemo noi di inserirla nella filiera. 
+
+👉 [Compila il form di segnalazione](https://forms.gle/WTkos5SfKXcT1Vme8)""")
+
+st.divider()
+
+st.caption("Realizzato per Motus-E da [Teraton](https://www.teraton.tech/)")
