@@ -68,6 +68,8 @@ oms.add_to(m)
 TagFilterButton(categories, clear_text="Deseleziona tutto").add_to(m)
 folium.FitOverlays().add_to(m)
 
+st.logo("motuselogo.png", size="medium")
+
 st.title("🔋 La filiera delle batterie in Italia 🇮🇹")
 
 st.markdown("""La **filiera italiana delle batterie** è un ecosistema articolato 
@@ -91,4 +93,4 @@ Segnalacela tramite questo breve modulo: ci occuperemo noi di inserirla nella fi
 
 st.divider()
 
-st.caption("Realizzato per Motus-E da [Teraton](https://www.teraton.tech/)")
+st.caption("Realizzato per [Motus-E](https://www.motus-e.org/) da [Teraton](https://www.teraton.tech/)")
