@@ -91,9 +91,9 @@ aziende_al_nord = len(df[df["Lat"] > 45])
 specializzazione = df["Filiera 1"].value_counts().index[0]
 
 with row:
-    st.metric(label="Aziende censite", value=aziende_censite, delta=0, border=True)
-    st.metric(label="Aziende in Nord Italia", value=aziende_al_nord, delta=0, border=True)
-    st.metric(label="Specializzazione principale", value=specializzazione, delta=0, border=True)
+    st.metric(label="Aziende censite", value=aziende_censite, delta=None, border=True)
+    st.metric(label="Aziende in Nord Italia", value=f"{aziende_al_nord / aziende_censite:.0%}", delta=None, border=True)
+    st.metric(label="Specializzazione principale", value=specializzazione, delta=None, border=True)
 
 st.divider()
 
