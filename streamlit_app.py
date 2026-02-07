@@ -5,6 +5,8 @@ from streamlit_folium import st_folium
 import numpy as np
 import pandas as pd
 
+st.set_page_config(page_title="Filiera italiana batterie", page_icon="🔋", layout="wide")
+
 data = "Filiera batterie Motus-E Italia.xlsx"
 df = pd.read_excel(data, engine="openpyxl")
 df = df.replace([None,np.nan], value=" ")
@@ -65,10 +67,6 @@ oms.add_to(m)
 
 TagFilterButton(categories, clear_text="Deseleziona tutto").add_to(m)
 folium.FitOverlays().add_to(m)
-
-
-
-
 
 st.title("🔋 La filiera delle batterie in Italia 🇮🇹")
 
