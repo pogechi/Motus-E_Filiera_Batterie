@@ -14,7 +14,7 @@ df[["Lat","Lon"]] = df["Lat,Lon"].str.split(",", expand=True)
 df["Lat"] = pd.to_numeric(df["Lat"], errors="coerce")
 df["Lon"] = pd.to_numeric(df["Lon"], errors="coerce")
 
-m = folium.Map((41.89, 12.48), zoom_start=6, 
+m = folium.Map((41.89, 12.48), zoom_start=7, 
                tiles="cartodb positron",
                max_bounds=True,
                scrollWheelZoom=False,
@@ -83,6 +83,17 @@ all’avvio delle attività. Puoi usare l’icona del filtro sulla mappa per esp
 aziende lungo l\'intera filiera delle batterie.""")
 
 st_data = st_folium(m, width=1400, height=700)
+
+row = st.container(horizontal=True)
+
+aziende_censite = len(df)
+aziende_al_nord = len(df[df["Lat"] > 45])
+specializzazione = df["Filiera 1"].value_counts().index[0]
+
+with row:
+    st.metric(label="Aziende censite", value=aziende_censite, delta=0, border=True)
+    st.metric(label="Aziende in Nord Italia", value=aziende_al_nord, delta=0, border=True)
+    st.metric(label="Specializzazione principale", value=specializzazione, delta=0, border=True)
 
 st.divider()
 
