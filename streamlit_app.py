@@ -82,7 +82,7 @@ completano il quadro i fornitori di servizi di testing e consorzi EPR.
 all’avvio delle attività. Puoi usare l’icona del filtro sulla mappa per esplorare le 
 aziende lungo l\'intera filiera delle batterie.""")
 
-st_data = st_folium(m, width=1400, height=700)
+st_data = st_folium(m, width=1400, height=700, use_container_width=True)
 
 st.subheader("📊 Alcuni numeri")
 row = st.container(horizontal=True)
