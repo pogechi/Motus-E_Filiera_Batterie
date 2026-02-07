@@ -18,10 +18,10 @@ m = folium.Map((41.89, 12.48), zoom_start=6,
                tiles="cartodb positron",
                max_bounds=True,
                scrollWheelZoom=False,
-               min_lat=35.83205927016135,
-               max_lat=48.155920623358526,
-               min_lon=-4.812802161016015,
-               max_lon=26.461693176182866)
+               min_lat=35,
+               max_lat=50,
+               min_lon=-4,
+               max_lon=27)
 geo_json_data = "it.json"
 folium.GeoJson(geo_json_data,
               style_function=lambda feature: {
@@ -80,7 +80,7 @@ completano il quadro i fornitori di servizi di testing e consorzi EPR.
 all’avvio delle attività. Puoi usare l’icona del filtro sulla mappa per esplorare le 
 aziende lungo l\'intera filiera delle batterie.""")
 
-st_data = st_folium(m, width=1200, height=700)
+st_data = st_folium(m, width=1400, height=700)
 
 st.divider()
 
